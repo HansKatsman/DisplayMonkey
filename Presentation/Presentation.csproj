@@ -81,9 +81,9 @@
   <ItemGroup>
     <Content Include="Content\jquery.timepicker.css" />
     <Content Include="files\js\powerbi.js" />
+    <Content Include="files\js\weather.js" />
     <Content Include="Images\button_blue.png" />
     <Content Include="Images\button_blue_red.png" />
-    <Content Include="files\js\weather.js" />
     <Content Include="Register.aspx" />
     <Content Include="Images\android-chrome-144x144.png" />
     <Content Include="Images\android-chrome-192x192.png" />

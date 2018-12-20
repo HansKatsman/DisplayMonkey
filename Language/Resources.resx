@@ -1685,4 +1685,7 @@
   <data name="Version" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="WeatherType_OpenWeather" xml:space="preserve">
+    <value>Open Weather</value>
+  </data>
 </root>

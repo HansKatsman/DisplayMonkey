@@ -1195,6 +1195,7 @@
         <EnumType Name="WeatherTypes">
           <Member Name="WeatherType_Yahoo" Value="0" />
           <Member Name="WeatherType_Wunderground" Value="1" />
+          <Member Name="WeatherType_OpenWeather" Value="2" />
         </EnumType>
         <EnumType Name="SettingTypes">
           <Member Name="SettingType_IntPositive" Value="0" />

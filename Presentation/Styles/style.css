@@ -508,7 +508,7 @@
     background: url(icons/black/svg/chanceflurries.svg);
 }
 
-.wu-black.wu-chancerain {
+.wu-black.wu-chancerain, .wu-black.ow-10d {
     background: url(icons/black/svg/chancerain.svg);
 }
 
@@ -524,19 +524,19 @@
     background: url(icons/black/svg/chancetstorms.svg);
 }
 
-.wu-black.wu-clear {
+.wu-black.wu-clear, .wu-black.ow-01d {
     background: url(icons/black/svg/clear.svg);
 }
 
-.wu-black.wu-cloudy {
+.wu-black.wu-cloudy, .wu-black.ow-04d {
     background: url(icons/black/svg/cloudy.svg);
 }
 
-.wu-black.wu-flurries {
+.wu-black.wu-flurries, .wu-black.ow-13d {
     background: url(icons/black/svg/flurries.svg);
 }
 
-.wu-black.wu-fog {
+.wu-black.wu-fog, .wu-black.ow-50d {
     background: url(icons/black/svg/fog.svg);
 }
 
@@ -544,7 +544,7 @@
     background: url(icons/black/svg/hazy.svg);
 }
 
-.wu-black.wu-mostlycloudy {
+.wu-black.wu-mostlycloudy, .wu-black.ow-03d {
     background: url(icons/black/svg/mostlycloudy.svg);
 }
 
@@ -552,7 +552,7 @@
     background: url(icons/black/svg/mostlysunny.svg);
 }
 
-.wu-black.wu-partlycloudy {
+.wu-black.wu-partlycloudy, .wu-black.ow-02d {
     background: url(icons/black/svg/partlycloudy.svg);
 }
 
@@ -560,7 +560,7 @@
     background: url(icons/black/svg/partlysunny.svg);
 }
 
-.wu-black.wu-rain {
+.wu-black.wu-rain, .wu-black.ow-09d {
     background: url(icons/black/svg/rain.svg);
 }
 
@@ -568,15 +568,15 @@
     background: url(icons/black/svg/sleet.svg);
 }
 
-.wu-black.wu-snow {
+.wu-black.wu-snow, .wu-black.ow-13d {
     background: url(icons/black/svg/snow.svg);
 }
 
-.wu-black.wu-sunny {
+.wu-black.wu-sunny, .wu-black.ow-01d {
     background: url(icons/black/svg/sunny.svg);
 }
 
-.wu-black.wu-tstorms {
+.wu-black.wu-tstorms, .wu-black.ow-11d {
     background: url(icons/black/svg/tstorms.svg);
 }
 
@@ -589,7 +589,7 @@
     background: url(icons/white/svg/chanceflurries.svg);
 }
 
-.wu-white.wu-chancerain {
+.wu-white.wu-chancerain, .wu-white.ow-10d{
     background: url(icons/white/svg/chancerain.svg);
 }
 
@@ -605,11 +605,11 @@
     background: url(icons/white/svg/chancetstorms.svg);
 }
 
-.wu-white.wu-clear {
+.wu-white.wu-clear, .wu-white.ow-01d {
     background: url(icons/white/svg/clear.svg);
 }
 
-.wu-white.wu-cloudy {
+.wu-white.wu-cloudy, .wu-white.ow-04d {
     background: url(icons/white/svg/cloudy.svg);
 }
 
@@ -617,7 +617,7 @@
     background: url(icons/white/svg/flurries.svg);
 }
 
-.wu-white.wu-fog {
+.wu-white.wu-fog, .wu-white.ow-50d {
     background: url(icons/white/svg/fog.svg);
 }
 
@@ -625,7 +625,7 @@
     background: url(icons/white/svg/hazy.svg);
 }
 
-.wu-white.wu-mostlycloudy {
+.wu-white.wu-mostlycloudy, .wu-white.ow-03d {
     background: url(icons/white/svg/mostlycloudy.svg);
 }
 
@@ -633,7 +633,7 @@
     background: url(icons/white/svg/mostlysunny.svg);
 }
 
-.wu-white.wu-partlycloudy {
+.wu-white.wu-partlycloudy, .wu-white.ow-02d {
     background: url(icons/white/svg/partlycloudy.svg);
 }
 
@@ -641,7 +641,7 @@
     background: url(icons/white/svg/partlysunny.svg);
 }
 
-.wu-white.wu-rain {
+.wu-white.wu-rain, .wu-white.ow-09d {
     background: url(icons/white/svg/rain.svg);
 }
 
@@ -649,15 +649,15 @@
     background: url(icons/white/svg/sleet.svg);
 }
 
-.wu-white.wu-snow {
+.wu-white.wu-snow, .wu-white.ow-13d {
     background: url(icons/white/svg/snow.svg);
 }
 
-.wu-white.wu-sunny {
+.wu-white.wu-sunny, .wu-white.ow-01d {
     background: url(icons/white/svg/sunny.svg);
 }
 
-.wu-white.wu-tstorms {
+.wu-white.wu-tstorms, .wu-white.ow-11d {
     background: url(icons/white/svg/tstorms.svg);
 }
 
@@ -670,7 +670,7 @@
     background: url(icons/black/svg/nt_chanceflurries.svg);
 }
 
-.wu-night.wu-black.wu-chancerain {
+.wu-night.wu-black.wu-chancerain, .wu-night.wu-black.ow-10n {
     background: url(icons/black/svg/nt_chancerain.svg);
 }
 
@@ -686,11 +686,11 @@
     background: url(icons/black/svg/nt_chancetstorms.svg);
 }
 
-.wu-night.wu-black.wu-clear {
+.wu-night.wu-black.wu-clear, .wu-night.wu-black.ow-01n {
     background: url(icons/black/svg/nt_clear.svg);
 }
 
-.wu-night.wu-black.wu-cloudy {
+.wu-night.wu-black.wu-cloudy, .wu-night.wu-black.ow-04n {
     background: url(icons/black/svg/nt_cloudy.svg);
 }
 
@@ -698,7 +698,7 @@
     background: url(icons/black/svg/nt_flurries.svg);
 }
 
-.wu-night.wu-black.wu-fog {
+.wu-night.wu-black.wu-fog, .wu-night.wu-black.ow-50n {
     background: url(icons/black/svg/nt_fog.svg);
 }
 
@@ -706,7 +706,7 @@
     background: url(icons/black/svg/nt_hazy.svg);
 }
 
-.wu-night.wu-black.wu-mostlycloudy {
+.wu-night.wu-black.wu-mostlycloudy, .wu-night.wu-black.ow-03n {
     background: url(icons/black/svg/nt_mostlycloudy.svg);
 }
 
@@ -714,7 +714,7 @@
     background: url(icons/black/svg/nt_mostlysunny.svg);
 }
 
-.wu-night.wu-black.wu-partlycloudy {
+.wu-night.wu-black.wu-partlycloudy, .wu-night.wu-black.ow-02n {
     background: url(icons/black/svg/nt_partlycloudy.svg);
 }
 
@@ -722,7 +722,7 @@
     background: url(icons/black/svg/nt_partlysunny.svg);
 }
 
-.wu-night.wu-black.wu-rain {
+.wu-night.wu-black.wu-rain, .wu-night.wu-black.ow-09n {
     background: url(icons/black/svg/nt_rain.svg);
 }
 
@@ -730,15 +730,15 @@
     background: url(icons/black/svg/nt_sleet.svg);
 }
 
-.wu-night.wu-black.wu-snow {
+.wu-night.wu-black.wu-snow, .wu-night.wu-black.ow-13n {
     background: url(icons/black/svg/nt_snow.svg);
 }
 
-.wu-night.wu-black.wu-sunny {
+.wu-night.wu-black.wu-sunny, .wu-night.wu-black.ow-01n{
     background: url(icons/black/svg/nt_sunny.svg);
 }
 
-.wu-night.wu-black.wu-tstorms {
+.wu-night.wu-black.wu-tstorms, .wu-night.wu-black.ow-11n {
     background: url(icons/black/svg/nt_tstorms.svg);
 }
 
@@ -751,7 +751,7 @@
     background: url(icons/white/svg/nt_chanceflurries.svg);
 }
 
-.wu-night.wu-white.wu-chancerain {
+.wu-night.wu-white.wu-chancerain, .wu-night.wu-white.ow-10n {
     background: url(icons/white/svg/nt_chancerain.svg);
 }
 
@@ -767,11 +767,11 @@
     background: url(icons/white/svg/nt_chancetstorms.svg);
 }
 
-.wu-night.wu-white.wu-clear {
+.wu-night.wu-white.wu-clear, .wu-night.wu-white.ow-01n {
     background: url(icons/white/svg/nt_clear.svg);
 }
 
-.wu-night.wu-white.wu-cloudy {
+.wu-night.wu-white.wu-cloudy, .wu-night.wu-white.ow-04n {
     background: url(icons/white/svg/nt_cloudy.svg);
 }
 
@@ -779,7 +779,7 @@
     background: url(icons/white/svg/nt_flurries.svg);
 }
 
-.wu-night.wu-white.wu-fog {
+.wu-night.wu-white.wu-fog, .wu-night.wu-white.ow-50n {
     background: url(icons/white/svg/nt_fog.svg);
 }
 
@@ -787,7 +787,7 @@
     background: url(icons/white/svg/nt_hazy.svg);
 }
 
-.wu-night.wu-white.wu-mostlycloudy {
+.wu-night.wu-white.wu-mostlycloudy, .wu-night.wu-white.ow-03n {
     background: url(icons/white/svg/nt_mostlycloudy.svg);
 }
 
@@ -795,7 +795,7 @@
     background: url(icons/white/svg/nt_mostlysunny.svg);
 }
 
-.wu-night.wu-white.wu-partlycloudy {
+.wu-night.wu-white.wu-partlycloudy, .wu-night.wu-white.ow-02n {
     background: url(icons/white/svg/nt_partlycloudy.svg);
 }
 
@@ -803,7 +803,7 @@
     background: url(icons/white/svg/nt_partlysunny.svg);
 }
 
-.wu-night.wu-white.wu-rain {
+.wu-night.wu-white.wu-rain, .wu-night.wu-white.ow-09n {
     background: url(icons/white/svg/nt_rain.svg);
 }
 
@@ -811,15 +811,15 @@
     background: url(icons/white/svg/nt_sleet.svg);
 }
 
-.wu-night.wu-white.wu-snow {
+.wu-night.wu-white.wu-snow, .wu-night.wu-white.ow-13n {
     background: url(icons/white/svg/nt_snow.svg);
 }
 
-.wu-night.wu-white.wu-sunny {
+.wu-night.wu-white.wu-sunny, .wu-night.wu-white.ow-01n {
     background: url(icons/white/svg/nt_sunny.svg);
 }
 
-.wu-night.wu-white.wu-tstorms {
+.wu-night.wu-white.wu-tstorms, .wu-night.wu-white.ow-11n {
     background: url(icons/white/svg/nt_tstorms.svg);
 }
 

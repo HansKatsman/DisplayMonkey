@@ -4485,6 +4485,15 @@ namespace DisplayMonkey.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open Weather.
+        /// </summary>
+        public static string WeatherType_OpenWeather {
+            get {
+                return ResourceManager.GetString("WeatherType_OpenWeather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Wunderground weather.
         /// </summary>
         public static string WeatherType_Wunderground {

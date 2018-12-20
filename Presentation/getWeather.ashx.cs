@@ -14,7 +14,7 @@ using System.Linq;
 using System.Web;
 using System.IO;
 using System.Data;
-//using System.Data.SqlClient;
+using System.Data.SqlClient;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Net;
@@ -42,7 +42,9 @@ namespace DisplayMonkey
             string tempUnit = request.StringOrBlank("tempU");
             int trace = request.IntOrZero("trace");
 
-            string key = WebConfigurationManager.AppSettings["WundergroundKey"];
+            string Okey = WebConfigurationManager.AppSettings["WeatherOpenkey"];      
+            string Wkey = WebConfigurationManager.AppSettings["WundergroundKey"];
+
             string language = request.StringOrBlank("culture");
             if (language.Length > 2)
             {
@@ -71,32 +73,52 @@ namespace DisplayMonkey
                     if (weather.Type == Models.WeatherTypes.WeatherType_Wunderground)
                     {
                         json = await HttpRuntime.Cache.GetOrAddAbsoluteAsync(
-                        string.Format("weather_{0}_{1}_{2}_{3}_{4}", weather.FrameId, weather.Version, key, language, location),
+                        string.Format("weather_{0}_{1}_{2}_{3}_{4}", weather.FrameId, weather.Version, Wkey, language, location),
                         async (expire) =>
                         {
                             expire.When = DateTime.Now.AddMinutes(weather.CacheInterval);
-                            return await GetWeatherAsync(key, language, location);
+                            return await GetWeatherAsync(Wkey, language, location);
                         });
-                    } else
+                    }
+                    else
                     {
-                        Dictionary<string, object> map = await HttpRuntime.Cache.GetOrAddAbsoluteAsync(
-                        string.Format("weather_{0}_{1}_{2}_{3}", weather.FrameId, weather.Version, tempUnit, woeid),
-                        async (expire) =>
-                        {
-                            expire.When = DateTime.Now.AddMinutes(weather.CacheInterval);
-                            return await GetYahooWeatherAsync(tempUnit, woeid);
-                        });
 
-                        if (map != null)
+                        if (weather.Type == Models.WeatherTypes.WeatherType_OpenWeather)
                         {
-                            JavaScriptSerializer oSerializer = new JavaScriptSerializer();
-                            json = oSerializer.Serialize(map);
+                            json = await HttpRuntime.Cache.GetOrAddAbsoluteAsync(
+                            string.Format("weather_{0}_{1}_{2}_{3}_{4}", weather.FrameId, weather.Version, Okey, language, location),
+                            async (expire) =>
+                            {
+                                expire.When = DateTime.Now.AddMinutes(weather.CacheInterval);
+                                return await GetWeatherOpenAsync(latitude, longitude, Okey);
+                            });
+
+                        }
+
+                        else
+
+                        {
+                            Dictionary<string, object> map = await HttpRuntime.Cache.GetOrAddAbsoluteAsync(
+                            string.Format("weather_{0}_{1}_{2}_{3}", weather.FrameId, weather.Version, tempUnit, woeid),
+                            async (expire) =>
+                            {
+                                expire.When = DateTime.Now.AddMinutes(weather.CacheInterval);
+                                return await GetYahooWeatherAsync(tempUnit, woeid);
+                            });
+
+                            if (map != null)
+                            {
+                                JavaScriptSerializer oSerializer = new JavaScriptSerializer();
+                                json = oSerializer.Serialize(map);
+                            }
                         }
                     }
                 }
 
                 else
+                {
                     throw new Exception("Incorrect frame data");
+                }
             }
 
             catch (Exception ex)
@@ -147,6 +169,21 @@ namespace DisplayMonkey
             return response;
         }
 
+        private async Task<string> GetWeatherOpenAsync(string lat, string lon, string key)
+        {
+            string url = $"http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&units=metric&lang=nl&APPID={key}";
+
+            string response = "";
+            using (WebClient client = new WebClient())
+            {
+                response = Encoding.ASCII.GetString(await client.DownloadDataTaskAsync(url));
+            }
+
+            return response;
+
+           
+        }
+        
         private async Task<Dictionary<string, object>> GetYahooWeatherAsync(string temperatureUnit, int woeid)
         {
             string url = string.Format(

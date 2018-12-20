@@ -533,6 +533,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Create.cs.t4</DependentUpon>
     </None>
+    <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />

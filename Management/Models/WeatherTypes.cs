@@ -14,6 +14,7 @@ namespace DisplayMonkey.Models
     public enum WeatherTypes : int
     {
         WeatherType_Yahoo = 0,
-        WeatherType_Wunderground = 1
+        WeatherType_Wunderground = 1,
+        WeatherType_OpenWeather = 2 
     }
 }
