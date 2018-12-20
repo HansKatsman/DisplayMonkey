@@ -90,7 +90,7 @@ namespace DisplayMonkey
                             async (expire) =>
                             {
                                 expire.When = DateTime.Now.AddMinutes(weather.CacheInterval);
-                                return await GetWeatherOpenAsync(latitude, longitude, Okey);
+                                return await GetWeatherOpenAsync(latitude, longitude, Okey, language);
                             });
 
                         }
@@ -169,9 +169,9 @@ namespace DisplayMonkey
             return response;
         }
 
-        private async Task<string> GetWeatherOpenAsync(string lat, string lon, string key)
+        private async Task<string> GetWeatherOpenAsync(string lat, string lon, string key, string language)
         {
-            string url = $"http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&units=metric&lang=nl&APPID={key}";
+            string url = $"http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&units=metric&lang={language}&APPID={key}";
 
             string response = "";
             using (WebClient client = new WebClient())
